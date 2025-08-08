@@ -7,6 +7,9 @@ set -e
 
 echo "🚀 Setting up personal devcontainer customizations.."
 
+# VSCode / Cursor doesn't allow you to call 'code' / 'cursor' commands outside of a dev container terminal (which can only exist after this script has run). 
+# This hack allows us to call these functions anyway. See: https://github.com/microsoft/vscode-remote-release/issues/8535#issuecomment-1827584359
+# Hopefully VSCode / Cursor will support this natively eventually...
 code_path="$(ls ~/.vscode-server*/bin/*/bin/code-server* 2>/dev/null | head -n 1)"
 if [ -z "$code_path" ]; then
     code_path="$(ls ~/.cursor-server*/bin/*/bin/cursor-server* 2>/dev/null | head -n 1)"
