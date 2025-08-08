@@ -1,0 +1,4 @@
+# Personal VS Code extensions
+# These will be installed automatically in devcontainers
+
+anthropic.claude-code

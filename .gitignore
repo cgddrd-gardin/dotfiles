@@ -1,0 +1,9 @@
+# Ignore temporary files
+.DS_Store
+*.tmp
+*.temp
+.vscode-server/
+
+# Ignore local testing files
+test/
+*.backup
