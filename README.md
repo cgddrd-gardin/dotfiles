@@ -7,9 +7,6 @@ Personal development environment configuration for VS Code devcontainers.
 This repository contains personal customizations that are automatically applied to devcontainers:
 
 - **VS Code Extensions**: Additional extensions for productivity and development
-- **VS Code Settings**: Personal editor preferences and themes
-- **Bash Configuration**: Custom aliases, functions, and environment variables
-- **Git Configuration**: Personal git settings and aliases
 - **Development Tools**: Useful scripts and productivity shortcuts
 
 ## Structure
