@@ -7,8 +7,12 @@ set -e
 
 echo "🚀 Setting up personal devcontainer customizations.."
 
-which code
-code --version
+code_path="$(ls ~/.vscode-server*/bin/*/bin/code-server* 2>/dev/null | head -n 1)"
+if [ -z "$code_path" ]; then
+    code_path="$(ls ~/.cursor-server*/bin/*/bin/cursor-server* 2>/dev/null | head -n 1)"
+fi
+export code="$code_path"
+$code --version
 
 # Install additional VS Code extensions
 if [ -f ~/dotfiles/vscode/extensions.txt ]; then
@@ -16,7 +20,7 @@ if [ -f ~/dotfiles/vscode/extensions.txt ]; then
     while IFS= read -r extension || [[ -n "$extension" ]]; do
         if [[ -n "$extension" && "$extension" != \#* ]]; then
             echo "  Installing: $extension"
-            code --install-extension "$extension" || echo "  ⚠️  Failed to install $extension"
+            $code --install-extension "$extension" || echo "  ⚠️  Failed to install $extension"
         fi
     done < ~/dotfiles/vscode/extensions.txt
 fi
