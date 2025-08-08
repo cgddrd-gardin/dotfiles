@@ -7,6 +7,9 @@ set -e
 
 echo "🚀 Setting up personal devcontainer customizations.."
 
+which code
+code --version
+
 # Install additional VS Code extensions
 if [ -f ~/dotfiles/vscode/extensions.txt ]; then
     echo "📦 Installing personal VS Code extensions..."
