@@ -2,3 +2,4 @@
 # These will be installed automatically in devcontainers
 
 anthropic.claude-code
+google.gemini-cli-vscode-ide-companion
