@@ -5,10 +5,10 @@
 
 echo "🔧 Running additional setup..."
 
-echo "Installing Claude..."
+echo "Installing Claude Code..."
 curl -fsSL https://claude.ai/install.sh | bash
 
-echo "Installing Claude..."
+echo "Installing Gemini CLI..."
 npm install -g @google/gemini-cli
 
 echo "✅ Additional personal setup complete!"
